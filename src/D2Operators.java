@@ -38,7 +38,7 @@ public class D2Operators {
 
         System.out.println(intResult);
 
-        // 선 변환을 통한 나누기 연산
+        // 형 변환을 통한 나누기 연산
         int left = 21;
         int right = 10;
         double castedResult = (double)left / right;
