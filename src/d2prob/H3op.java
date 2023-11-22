@@ -8,6 +8,6 @@ public class H3op {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        System.out.println("n번째 알파벳 : " + (char)(64 + n));
+        System.out.println((char)(64 + n));
     }
 }
