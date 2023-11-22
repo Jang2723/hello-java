@@ -10,7 +10,7 @@ public class H6op {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double temp = scanner.nextDouble();
-        boolean goHospital = temp >=38 || temp <=36 ? true : false; //true 병원 가기, fasle 병원 안가기
+        boolean goHospital = temp >=38 || temp <=36; //true 병원 가기, fasle 병원 안가기
         System.out.println(goHospital);
     }
 }
