@@ -133,6 +133,9 @@ public class D3ControlStatements {
                 System.out.println("invalid");
                 break;
         }
+
+
+
         switch (input) {
             case "w" ->
                     System.out.println("up");
@@ -142,6 +145,131 @@ public class D3ControlStatements {
                     System.out.println("down");
             case "d" ->
                     System.out.println("right");
+        }
+
+        // while
+        // 대출금 천만원
+        int loan = 1000;
+        int months = 0;
+        // 대출금 남았니?
+        while (loan > 0){
+            loan -= 50;
+            loan *= 1.03;
+            months++;
+            System.out.println("남은 대출액 : " + loan);
+        }
+        System.out.println("대출 상환 완료! 총 걸린 개월수 : " + months);
+
+
+        int[] numbers = {2, 3, 5, 6, 19, 23};
+//        int i = 0;
+//        // 총합 및 평균 구하기
+//        int sum = 0;
+//        while (i < numbers.length) {
+//            sum += numbers[i];
+//            i++;
+//        }
+//        System.out.println(sum);
+//        System.out.println((double)sum/numbers.length);
+
+        // for 횟수가 정해져 있을 때 사용
+        for(int i = 0; i<10; i++){
+            System.out.println(i);
+        }
+
+        // 총합, 최대, 평균
+        int sum = 0;
+        int max = -100;
+        for (int i = 0; i < numbers.length ; i++) {
+            sum += numbers[i];
+            if(numbers[i] > max){
+                max = numbers[i];
+            }
+        }
+
+        System.out.println("총합 : " + sum);
+        System.out.println("최대 : " + max);
+        System.out.println("평균 : " + (double)sum/numbers.length);
+
+        /*
+        *
+        **
+        ***
+        ****
+        *****
+        별찍기 */
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < i + 1; j++) {
+                System.out.print('*');
+            }
+            System.out.println();
+        }
+
+//        for(;;){
+//            System.out.println("이건 그냥 무한루프입니다");
+//        }
+
+        //foreach
+        String[] fruits = {"apple", "pear", "banana"};
+        for (String name : fruits){
+            System.out.println(name);
+        }
+
+        // 같은 기능을 하는 for문은
+        for (int i = 0; i < fruits.length;  i++) {
+            String name = fruits[i];
+            System.out.println(name);
+        }
+
+        // 반복문 제어
+        int wallet = 20000;
+        int price = 5000;
+        while(true){
+            wallet -= price;
+            if (wallet <= 0){
+                System.out.println("돈 다 써서 더 못먹음ㅠㅠ");
+                // 그만먹자.
+                break;
+            }
+            System.out.println(String.format("1인분 먹고 %d 남음", wallet));
+        }
+
+        // numbers 내부에 19가 어디 있는지
+        // 있다면 그 위치를 없다면 -1을 출력하도록
+        numbers = new int[]{1, 3, 4, 11, 19, 21, 23};
+        int target = -1;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == 19){
+                target = i;
+                // 발견 즉시 반복 종료
+                break;
+            }
+        }
+        System.out.println(target);
+
+        // continue
+        // 0 ~ 9 사이의 짝수만 출력하고 싶다.
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 != 0){
+                continue;
+            }
+            System.out.println(i);
+        }
+
+        // 백신을 맞지 않은 사람만 세기
+        boolean[] vaccinated = {true, false, false, false, false, false, false, true, true};
+        int groupCount = 0;
+        for(boolean vaccine : vaccinated){
+            if (vaccine){
+                System.out.println("백신 맞으면 세지 않아요");
+                continue;
+            }
+            groupCount++;
+            // 일정 인원 이상이면 입장불가
+            if (groupCount > 5){
+                System.out.println("입장이 불가합니다...");
+                break;
+            }
         }
     }
 }
