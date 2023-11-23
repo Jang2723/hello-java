@@ -11,12 +11,12 @@ public class H3con {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         if (a == 0){
-            // b는 인치 -> 센티미터로 출력
-            System.out.println(String.format("%.2f", b * 2.54 )); //
+            // b는 센티미터 -> 인치로 출력
+            System.out.println(String.format("%.2f inch", b/2.54));
         }
         else{
-            // b는 센티미터 -> 인치로 출력
-            System.out.println(String.format("%.2f", b/2.54));
+            // b는 인치 -> 센티미터로 출력
+            System.out.println(String.format("%.2f cm", b * 2.54 )); //
         }
     }
 }

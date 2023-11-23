@@ -19,7 +19,7 @@ public class H4con {
         }
 
         for (int i = 0; i < 3; i++) {
-            if(temp[i] >= 38){
+            if(temp[i] > 38){
                 System.out.println("체온 38도 넘는 사람 : "+names[i]);
             }
         }

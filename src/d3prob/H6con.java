@@ -13,7 +13,7 @@ public class H6con {
         boolean exNoEx = scanner.nextBoolean(); // 29일 유무
         String[] week = {"월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"};
         int[] days = {31,28,31,30,31,30,31,31,30,31,30,31}; //각 달의 일수
-        String thisSunday;
+        String thisWeek; //이번달 1일 요일
         System.out.println("1월 1일 "+ week[n]);
         // 저번달 요일 인덱스
         int monthIndex = n;
@@ -24,8 +24,8 @@ public class H6con {
             //((전달 일수 % 7) + 전달요일 인덱스 ) %7
             for (int i = 0; i < days.length-1; i++) {
                 //2월부터
-                thisSunday = week[(days[i]%7 + monthIndex) %7];
-                System.out.println(String.format("%d월 1일 %s", i+2,thisSunday));
+                thisWeek = week[(days[i]%7 + monthIndex) %7];
+                System.out.println(String.format("%d월 1일 %s", i+2,thisWeek));
                 monthIndex = (days[i]%7 + monthIndex );
             }
         }
@@ -33,13 +33,13 @@ public class H6con {
             // 29일까지 있을 떄 //3월 계산에만 영향
             for (int i = 0; i < days.length-1; i++) {
                 if (i == 1){
-                    thisSunday = week[((days[i]+1)%7 +monthIndex) %7];
-                    System.out.println(String.format("%d월 1일 %s", i+2,thisSunday));
+                    thisWeek = week[((days[i]+1)%7 +monthIndex) %7];
+                    System.out.println(String.format("%d월 1일 %s", i+2,thisWeek));
                     monthIndex = ((days[i]+1)%7 + monthIndex );
 
                 }else {
-                    thisSunday = week[((days[i]) % 7 + monthIndex) % 7];
-                    System.out.println(String.format("%d월 1일 %s", i + 2, thisSunday));
+                    thisWeek = week[((days[i]) % 7 + monthIndex) % 7];
+                    System.out.println(String.format("%d월 1일 %s", i + 2, thisWeek));
                     monthIndex = (days[i]%7 + monthIndex );
                 }
 
