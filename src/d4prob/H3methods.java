@@ -9,27 +9,26 @@ import java.util.Scanner;
 public class H3methods {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String op = scanner.next();
+        char op = scanner.next().charAt(0);
         int a = scanner.nextInt();
         int b = scanner.nextInt();
-        System.out.println((Operation(op,a,b)));
+        System.out.println((calculate(op,a,b)));
     }
-    public static int Operation(String op, int a,int b ){
-        int cal =0;
+    public static int calculate(char op, int a,int b ){
         switch(op){
-            case "+":
-                cal = a + b;
-                break;
-            case "-":
-                cal = a - b;
-                break;
-            case "*":
-                cal = a * b;
-                break;
-            case "/":
-                cal = a / b;
-                break;
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+                return a / b;
+//          default  를 쓰거나
+//            default:
+//                return -1;
         }
-        return cal;
+        // return을 하거나
+        return -1;
     }
 }

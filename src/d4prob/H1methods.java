@@ -7,25 +7,20 @@ import java.util.Scanner;
 151 ~ 이면 "매우 나쁨"
 이라는 문자열을 반환하는 메서드를 작성하시오.*/
 public class H1methods {
+    public static String dustStatus(int dust) {
+        if (dust <= 30) {
+            return "좋음";
+        } else if (dust <= 80) {
+            return "보통";
+        } else if (dust <= 150) {
+            return "나쁨";
+        } else {
+            return "매우 나쁨";
+        }
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int dust = scanner.nextInt();
-        System.out.println(Weather(dust));
-    }
-    public static String Weather(int dust) {
-        String str;
-        if (dust <= 30) {
-            str = "좋음";
-            return str;
-        } else if (dust <= 80) {
-            str = "보통";
-            return str;
-        } else if (dust <= 150) {
-            str = "나쁨";
-            return str;
-        } else {
-            str = "매우 나쁨";
-            return str;
-        }
+        System.out.println(dustStatus(dust));
     }
 }
