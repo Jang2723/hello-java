@@ -79,7 +79,7 @@ public class Main {
         swap(a,b);
         System.out.println(a); // 10
         System.out.println(b); // 20
-        
+
         refuel(someCar);
         System.out.println(someCar.getFuel()); //150000
     }
