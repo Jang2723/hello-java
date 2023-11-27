@@ -1,4 +1,4 @@
-package d5prob;
+package d5.d5prob;
 
 public class Main_batter {
 }

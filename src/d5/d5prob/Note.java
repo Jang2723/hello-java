@@ -1,4 +1,4 @@
-package d5prob;
+package d5.d5prob;
 /*### Q4
 
 `Note` 클래스를 만들어보자.

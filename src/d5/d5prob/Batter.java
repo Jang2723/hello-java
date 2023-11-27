@@ -1,4 +1,4 @@
-package d5prob;
+package d5.d5prob;
 /*### Q5
 
 야구의 타자를 나타내는 `Batter` 클래스를 만들어보자.

@@ -1,4 +1,4 @@
-package d5prob;
+package d5.d5prob;
 /*
 ### Q1
 `Person` 클래스를 만들어보자.
@@ -16,11 +16,12 @@ public class Person{
         public int age;
 
         public Person(String name){
-            age = 0;
+            this.name = name;
+            this.age = 0;
         }
         public void sayHello(){
-            if(age >= 5){
-                System.out.println(String.format("Hello, I'm %s!", name));
+            if(this.age >= 5){
+                System.out.println(String.format("Hello, I'm %s!", this.name));
             }
             else{
                 System.out.println("응애응애");
@@ -28,8 +29,8 @@ public class Person{
         }
 
         public int age(){
-            age += 1;
-            return age;
+            this.age += 1;
+            return this.age;
         }
         public String getName(){
             return name;
@@ -38,6 +39,12 @@ public class Person{
             return age;
         }
 
-
-
+        public static void main(String[] args){
+            Person person = new Person("Steve");
+            person.sayHello();
+            for (int i = 0; i < 5; i++) {
+                person.age();
+            }
+            person.sayHello();
+        }
 }
