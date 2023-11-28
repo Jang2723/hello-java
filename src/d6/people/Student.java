@@ -1,6 +1,8 @@
-package d6;
+package d6.people;
 
-public class Student extends Person{
+import d6.people.Person;
+
+public class Student extends Person {
     private String major;
 
     public Student(String name, int age, String major){

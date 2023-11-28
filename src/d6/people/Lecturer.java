@@ -1,4 +1,4 @@
-package d6;
+package d6.people;
 
 // 이름, 주제, 인사
 public class Lecturer extends Person {

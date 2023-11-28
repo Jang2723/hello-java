@@ -1,4 +1,6 @@
-package d6;
+package d6.vehicles;
+
+import d6.vehicles.Car;
 
 // 가장 먼저 자동차의 모든 기능을 가지게 만들자.
 public class Truck extends Car {

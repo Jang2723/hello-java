@@ -1,4 +1,8 @@
-package d6;
+package d6.people;
+
+import d6.people.Lecturer;
+import d6.people.Person;
+import d6.people.Student;
 
 import java.util.Arrays;
 

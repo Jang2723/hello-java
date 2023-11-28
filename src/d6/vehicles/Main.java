@@ -1,4 +1,7 @@
-package d6;
+package d6.vehicles;
+
+import d6.vehicles.Car;
+import d6.vehicles.Truck;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,7 +49,7 @@ public class Main {
     }
 
     public static boolean isTruck(Car car){
-        return car instanceof  Truck;
+        return car instanceof Truck;
     }
     public static void refuel(Car car){
         car.setFuel(100);

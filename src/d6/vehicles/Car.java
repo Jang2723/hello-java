@@ -1,4 +1,4 @@
-package d6;
+package d6.vehicles;
 
 /*
 연료가 얼마나 들었는지에 대한 정보

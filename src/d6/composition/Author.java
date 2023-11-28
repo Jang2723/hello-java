@@ -1,4 +1,4 @@
-package d6;
+package d6.composition;
 
 import java.time.LocalDateTime;
 

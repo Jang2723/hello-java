@@ -1,4 +1,4 @@
-package d6;
+package d6.vehicles;
 
 public interface Beeper {
     // 변수를 가질 수 없고, 생성자 생성도 x
