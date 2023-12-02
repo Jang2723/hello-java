@@ -43,10 +43,20 @@ public class BufferFileMain {
              BufferedWriter writer = new BufferedWriter(fileWriter)){
 //            for (String line : readLines) {
 //                // 무슨 내용을 작성할건지
-//                writer.write(line);
-//                writer.newLine();
-//            }
-
+////                writer.write(line);
+////                writer.newLine();
+////            }
+            for (Person person : people) {
+                String line = String.format(
+                        "%s,%s,%d,%s",
+                        person.getName(),
+                        person.getEmail(),
+                        person.getAge() + 1,
+                        person.getGender()
+                );
+                writer.write(line);
+                writer.newLine();
+            }
         } catch (IOException e) {
             System.out.println("Error Writing File: " + e.getMessage());
         }

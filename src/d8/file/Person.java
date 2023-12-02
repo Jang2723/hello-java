@@ -1,5 +1,6 @@
 package d8.file;
 
+import java.util.Objects;
 
 // 데이터를 들고있는 Java 객체다.
 // Plain Old Java Object
@@ -52,6 +53,19 @@ public class Person {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Objects.equals(name, person.name) && Objects.equals(email, person.email) && Objects.equals(gender, person.gender);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, email, age, gender);
+    }
+
+    @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
@@ -60,6 +74,4 @@ public class Person {
                 ", gender='" + gender + '\'' +
                 '}';
     }
-
-
 }

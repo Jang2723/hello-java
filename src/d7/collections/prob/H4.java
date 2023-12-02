@@ -1,4 +1,4 @@
-//package d7.collections.prob;
+package d7.collections.prob;
 //
 //import java.util.*;
 //
@@ -27,7 +27,7 @@
 //BA Eric Fred
 //```
 //* */
-//public class H4 {
+public class H4 {
 //    public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);
 //        Map<String, List<String>> majorStudents = new HashMap<>();
@@ -57,4 +57,4 @@
 //
 //
 //    }
-//}
+}
