@@ -60,7 +60,7 @@ public class MapMain {
         cseStudents.add("Alex");
         cseStudents.add("Brad");
         cseStudents.add("Chad");
-        System.out.println(majorStudents);
+        System.out.println(majorStudents); //{CSE=[Alex, Brad, Chad]}
 
         // keySet(), entrySet()
         // Map을 순회하고 싶으면 둘중 하나 선택할 수 있다.

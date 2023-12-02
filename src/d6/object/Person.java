@@ -2,11 +2,11 @@ package d6.object;
 
 import java.util.Objects;
 
-
-
-
-
-
+/*
+이름과 나이를 속성으로 가지고
+모든 속성을 받는 생성자
+ + 각 속성의 Getter
+ */
 public abstract class Person {
     private String name;
     private int age;

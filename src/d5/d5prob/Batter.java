@@ -27,10 +27,11 @@ package d5.d5prob;
 public class Batter {
     //1. 타석수, 안타수, 볼넷수, 루타수에 대한 정보를 가지고 있다.
     //   - 초기값은 다 0이며 설정이 불가하다.
-    public static int batNum = 0; // 타석수
-    public static int hits = 0; // 안타수
-    public static int walk = 0; // 볼넷수
-    public static int basesNum = 0; // 루타수
+    private String name;
+    private int atBats = 0; // 타석수
+    private int hits = 0; // 안타수
+    private int walks = 0; // 볼넷수
+    private int numOfBases = 0; // 루타수
 
     /*2. 타자의 타격 결과를 상징하는 메서드들을 가지고 있다.
    - 안타를 나타내는 `hit` 메서드를 가지고 있다.
@@ -39,23 +40,30 @@ public class Batter {
      - 전달된 `bases` 인자만큼 루타수가 증가한다.
      - `bases` 인자가 범위를 벗어나면 아무것도 하지 않는다.???
    */
+    public Batter(String name){
+        this.name = name;
+        this.atBats = 0;
+        this.hits = 0;
+        this.walks = 0;
+        this.numOfBases = 0;
+    }
 
     public void hit(int bases){ // bases : 몇 루타인지
         // 안타를 나타내는 메서드
-        batNum +=1;
+        atBats +=1;
         hits += 1;
-        basesNum += bases;
+        numOfBases += bases;
     }
     // - 아웃을 나타내는 `out` 메서드를 가지고 있다.
     //     - 타석수가 1 증가한다.
     public void out(){
-        batNum += 1;
+        atBats += 1;
     }
     //- 볼넷을 나타내는 `walk` 메서드를 가지고 있다.
     //     - 타석수와 볼넷수가 1씩 증가한다
     public void walk(){
-        walk += 1;
-        batNum += 1;
+        this.walks += 1;
+        this.atBats += 1;
     }
 
     //3. 타자의 성적을 묘사하는 메서드들을 가지고 있다.
@@ -70,11 +78,11 @@ public class Batter {
 
     public double batAvg(){ //타율 반환 메서드
         //타율은 `안타수 / (타석수 - 볼넷수)
-        double batAvg = (double)hits / (batNum - walk);
+        double batAvg = (double)hits / (atBats - walks);
         return batAvg;
     }
     public double onBasePer(){ // 출루율 반환 메서드
-        onBasePer = (double) (hits + walk) / batNum;
+        onBasePer = (double) (hits + walks) / atBats;
         return onBasePer;
     }
 
@@ -83,7 +91,7 @@ public class Batter {
     //    public static int walk = 0; // 볼넷수
     //    public static int basesNum = 0; // 루타수
     public double slugPer(){ // 장타율 반환 메서드
-        slugPer = (double) basesNum/(batNum - walk);
+        slugPer = (double) numOfBases /(atBats - walks);
         return slugPer;
     }
     //    //   - OPS를 반환하는 `ops()` 메서드를 가지고 있다. OPS는 `출루율 + 장타율`로 계산한다.
